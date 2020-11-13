@@ -72,20 +72,17 @@ class _MenuState extends State<Menu> {
                     return Container(
                       height: 350,
                       width: 650,
+                      color: Colors.green,
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: <Widget>[
                           Text(
-                            "Pesquisa receita",
+                            "Receita válida!",
                             style: textStyleTitulo(),
                           ),
-                          Text(
-                            data.toString(),
-                          ),
+                          Text(data.toString(), textAlign: TextAlign.center),
                           FlatButton(
-                              color: Theme.of(context)
-                                  .primaryColor
-                                  .withOpacity(0.1),
+                              color: Colors.white,
                               textColor: Colors.black,
                               child: Text('OK'),
                               onPressed: () {
@@ -98,24 +95,26 @@ class _MenuState extends State<Menu> {
                     return Container(
                       height: 350,
                       width: 650,
+                      color: Colors.red,
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           SelectableText(
-                            "Pesquisa de receita",
+                            "Receita indisponível para venda!",
                             style: textStyleTitulo(),
                           ),
                           SizedBox(
                             height: 10,
                           ),
-                          SelectableText(data.toString()),
+                          SelectableText(
+                            data.toString(),
+                            textAlign: TextAlign.center,
+                          ),
                           SizedBox(
                             height: 10,
                           ),
                           FlatButton(
-                              color: Theme.of(context)
-                                  .primaryColor
-                                  .withOpacity(0.1),
+                              color: Colors.white,
                               textColor: Colors.black,
                               child: Text('OK'),
                               onPressed: () {
@@ -128,26 +127,25 @@ class _MenuState extends State<Menu> {
                     return Container(
                       height: 350,
                       width: 650,
+                      color: Colors.red,
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           SelectableText(
-                            "Pesquisa de receita",
+                            "Erro na verificação!",
                             style: textStyleTitulo(),
                           ),
                           SizedBox(
                             height: 10,
                           ),
                           SelectableText(
-                              "Erro no código de validação. O mesmo deve seguir o padrão 36-char." +
-                                  "\n Ex.: 1b2c74a3-4c4d-45dc-8514-b32dfa38fd64"),
+                              "Erro: Código inválido. O QRcode não segue o padrão aceito",
+                              textAlign: TextAlign.center),
                           SizedBox(
                             height: 10,
                           ),
                           FlatButton(
-                              color: Theme.of(context)
-                                  .primaryColor
-                                  .withOpacity(0.1),
+                              color: Colors.white,
                               textColor: Colors.black,
                               child: Text('OK'),
                               onPressed: () {

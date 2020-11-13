@@ -56,7 +56,7 @@ class ApiCollection {
 
   ///////////////// Checar a receita através do QRcode ///////////////////
   Future<dynamic> checkQRCode() async {
-    final String url = "http://192.168.0.109:$port/api/example/check-receita";
+    final String url = "http://$host:$port/api/example/check-receita";
 
     var response = await http.post(Uri.encodeFull(url),
         headers: {
@@ -71,7 +71,7 @@ class ApiCollection {
 
   ///////////////// Cadastriar receita médica no sistema ///////////////////
   Future<dynamic> cadastroReceita() async {
-    final String url = "http://192.168.0.109:$port/api/example/create-receita";
+    final String url = "http://$host:$port/api/example/create-receita";
 
     var response = await http.post(Uri.encodeFull(url),
         headers: {
@@ -95,7 +95,7 @@ class ApiCollection {
 
   ///////////////// Realizar a venda da receita médica ///////////////////
   Future<dynamic> vendaReceita() async {
-    final String url = "http://192.168.0.109:$port/api/example/venda-receita";
+    final String url = "http://$host:$port/api/example/venda-receita";
 
     var response = await http.post(Uri.encodeFull(url),
         headers: {
@@ -118,7 +118,7 @@ class ApiCollection {
   //////////////////////// Lista de todas as receitas //////////////////////////
 
   Future<dynamic> getAllReceitas() async {
-    final String apiUrl = "http://192.168.0.109:$port/api/example/receitas";
+    final String apiUrl = "http://$host:$port/api/example/receitas";
     http.Response response = await http.get(apiUrl);
     return json.decode(response.body);
   }
@@ -126,7 +126,7 @@ class ApiCollection {
   //////////////////////// Lista de todas as receitas //////////////////////////
 
   Future<dynamic> getMyReceitas() async {
-    final String apiUrl = "http://192.168.0.109:$port/api/example/my-receitas";
+    final String apiUrl = "http://$host:$port/api/example/my-receitas";
     http.Response response = await http.get(apiUrl);
     return json.decode(response.body);
   }
