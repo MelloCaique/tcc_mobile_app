@@ -22,15 +22,15 @@ class _LoginState extends State<Login> {
     instituicao = dropDownValue;
     if (instituicao == "Consultório A") {
       port = "50005";
-      host = "192.168.0.106";
+      host = "192.168.0.102";
     }
     if (instituicao == "Farmácia A") {
       port = "50006";
-      host = "192.168.0.106";
+      host = "192.168.0.102";
     }
     if (instituicao == "Farmácia B") {
       port = "50007";
-      host = "192.168.0.106";
+      host = "192.168.0.102";
     }
     Navigator.push(context, MaterialPageRoute(builder: (context) => Menu()));
   }
